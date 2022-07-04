@@ -1,0 +1,14 @@
+.header {
+    height: 64px;
+    background-color: #2196F3;
+}
+.headerNav {
+    display: flex;
+}
+.catsNavLink {
+    padding: 20px 22px;
+    text-decoration: none;
+}
+.active {
+    background-color: #1E88E5;
+}
