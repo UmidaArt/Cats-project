@@ -1,0 +1,7 @@
+.cat-card {
+    transition: 0.7s;
+}
+.cat-card:hover {
+    box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}

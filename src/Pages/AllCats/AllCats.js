@@ -3,17 +3,28 @@ import "./AllCats.css"
 import axios from "axios";
 import {useDispatch} from "react-redux";
 import FavoriteBtn from "../../Components/FavoriteBtn";
+import Spinner from "../../Components/Spinner";
 
 const AllCats = () => {
 
     const dispatch = useDispatch()
 
     const [cats, setCats] = useState([])
+    const [loader, setLoader] = useState(true)
 
     useEffect(() => {
         axios(`https://api.thecatapi.com/v1/images/search?page=0&limit=20`)
-            .then(({data}) => setCats(data))
+            .then(({data}) => {
+                setCats(data)
+                setLoader(false)
+            })
+
     },[])
+
+    if (loader) {
+        return <Spinner/>
+    }
+
 
     const addFavorite = (cat) => {
         dispatch({type: 'ADD_TO_FAVORITES', payload: cat})
@@ -27,7 +38,7 @@ const AllCats = () => {
                             <img className="object-center object-cover w-full h-full"
                                  src={cat.url}
                                  alt="photo"/>
-                            <FavoriteBtn click={() => addFavorite(cat)}/>
+                            <FavoriteBtn onClick={() => addFavorite(cat)}/>
                         </div>
                     ))
                 }

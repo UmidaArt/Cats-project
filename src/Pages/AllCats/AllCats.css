@@ -1,7 +1,14 @@
-.cat-card:hover .favorite {
+.cat-card {
+    transition: 0.7s;
+}
+.cat-card:hover {
+    box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+.cat-card:hover .like-favorite {
     display: block;
 }
-.favorite {
+.like-favorite {
     position: absolute;
     right: 28px;
     bottom: 28px;
@@ -12,6 +19,6 @@
     transition: 0.4s;
     display: none;
 }
-.favorite:hover {
+.like-favorite:hover {
     background-image: url("../../Assets/Images/favorite-added.svg");
 }

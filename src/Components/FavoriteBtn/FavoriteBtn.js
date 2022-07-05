@@ -1,9 +1,9 @@
 import React from 'react';
 
-const FavoriteBtn = ({click}) => {
+const FavoriteBtn = ({onClick}) => {
 
     return (
-      <div className='favorite' >
+      <div className='like-favorite' onClick={onClick}>
 
       </div>
     );
