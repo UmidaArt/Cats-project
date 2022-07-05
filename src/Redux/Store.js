@@ -10,7 +10,7 @@ const storeReducer = (state = initialState, action) => {
         case 'ADD_TO_FAVORITES':
             return {...state, favorites: [...state.favorites, action.payload]}
         case 'REMOVE_TO_FAVORITES':
-            return {...state, favorites: state.favorites.filter(cat => cat.id !== action.payload)}
+            return {...state, favorites: state.favorites.filter(cat => cat.id !== action.payload.id)}
         default:
             return state
     }

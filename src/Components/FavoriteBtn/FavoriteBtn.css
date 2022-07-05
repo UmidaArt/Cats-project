@@ -1,0 +1,28 @@
+.like-favorite {
+    position: absolute;
+    right: 28px;
+    bottom: 28px;
+    width: 40px;
+    height: 37px;
+    background-image: url("../../Assets/Images/Vector.svg");
+    cursor: pointer;
+    transition: 0.4s;
+    display: none;
+}
+.like-favorite:hover {
+    background-image: url("../../Assets/Images/favorite-added.svg");
+}
+.cat-card:hover .delete {
+    display: block;
+}
+.delete {
+    position: absolute;
+    right: 28px;
+    bottom: 28px;
+    width: 40px;
+    height: 37px;
+    background-image: url("../../Assets/Images/favorite-added.svg");
+    cursor: pointer;
+    transition: 0.4s;
+    display: none;
+}

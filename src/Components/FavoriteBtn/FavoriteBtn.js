@@ -1,11 +1,15 @@
 import React from 'react';
+import './FavoriteBtn.css'
 
-const FavoriteBtn = ({onClick}) => {
+const FavoriteBtn = ({onClick, isFavorite = false}) => {
 
     return (
-      <div className='like-favorite' onClick={onClick}>
+        <>
+            {
+                isFavorite ? <div className='delete' onClick={onClick}> </div> : <div className='like-favorite' onClick={onClick}/>
 
-      </div>
+            }
+        </>
     );
 };
 
